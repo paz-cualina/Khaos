@@ -17,14 +17,59 @@ main {
     padding-bottom: 40px;
 }
 
-.product-item div {
+.product-item div:not(.top-newarrivals) {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.product-item img {
+.product-item div.top-newarrivals {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     max-width: 400px;
+    cursor: pointer;
+}
+
+.product-item img {
+    width: inherit;
+    max-width: inherit;
+    margin-bottom: -4px;
+}
+
+.product-item div.top-newarrivals:hover .overlay {
+    opacity: .5;
+}
+
+.product-item div.top-newarrivals:active .overlay {
+    opacity: 0;
+}
+
+.product-item div.top-newarrivals .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+  
+.product-item div.top-newarrivals .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.product-item div.top-newarrivals:active img {
+    transform: scale(2);
+    transform-origin: bottom;
 }
 
 .product-item input.buttonCarrito {
@@ -40,6 +85,7 @@ main {
 .product-item input.buttonCarrito:hover {
     background-color: rgb(184, 88, 88);
     color: whitesmoke;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
 }
 
 .product-item input.buttonCantidad {
@@ -54,4 +100,10 @@ main {
     width: 55px;
     padding: 4px;
     border-radius: 4px;
+}
+
+@media only screen and (max-width:600px) {
+    .product-item div.top-newarrivals:hover .overlay {
+        opacity: 0;
+    }
 }
