@@ -59,7 +59,8 @@ main {
   
 .product-item div.top-newarrivals .text {
     color: white;
-    font-size: 20px;
+    font-family: "inter";
+    font-size: 17px;
     position: absolute;
     top: 50%;
     left: 50%;
