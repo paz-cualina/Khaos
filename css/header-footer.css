@@ -6,7 +6,7 @@ body {
 
 .body-wrapper {
     display: grid;
-    grid-template-columns: auto minmax(auto, 1000px) auto;
+    grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
     grid-template-rows: auto;
     grid-template-areas: "header header header"
                          "vacio1 main vacio2"
