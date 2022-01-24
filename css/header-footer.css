@@ -80,7 +80,7 @@ header .headerContent {
     align-items: center;
 }
 
-header div .logo img {
+header .logo img {
     width: 150px;
 }
 
@@ -88,7 +88,6 @@ header .welcomeKhaos {
     color: whitesmoke;
     font-family: "inter";
     letter-spacing: 1px;
-    margin: 0px;
     flex-grow: 1;
 }
 
@@ -103,6 +102,19 @@ header p {
 
 header .form-control {
     border-radius: 7px;
+    background-color: black;
+    border: 1px solid whitesmoke;
+}
+
+header .form-control:focus {
+    background-color: black;
+    border: 1px solid #afafaf;
+    color: whitesmoke;
+}
+
+.btn-outline-secondary {
+    color: whitesmoke;
+    border-color: whitesmoke;
 }
 
 header .search {
@@ -118,8 +130,8 @@ header .carrito {
     font-family: "inter";
     font-size: 15px;
     color: whitesmoke;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 header .carrito p {
@@ -154,6 +166,18 @@ footer .redesSociales {
 
 footer .newsletter {
     width: 40%;
+}
+
+footer .form-control {
+    border-radius: 7px;
+    background-color: black;
+    border: 1px solid whitesmoke;
+}
+
+footer .form-control:focus {
+    background-color: black;
+    border: 1px solid #afafaf;
+    color: whitesmoke;
 }
 
 footer h5 {
@@ -195,12 +219,16 @@ footer #copyright {
 
 @media only screen and (max-width:680px) {
     
-    header .search {
-        display: none;
+    header .welcomeKhaos {
+        padding-left: 30px;
     }
 
     header .carrito {
-        padding-left: 0px;
+        padding-left: 30px;
+    }
+
+    header .search {
+        display: none;
     }
     
     header .logo {
