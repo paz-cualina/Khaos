@@ -19,7 +19,6 @@ main {
 
 .product-item div:not(.top-newarrivals) {
     padding-top: 5px;
-    padding-bottom: 5px;
 }
 
 .product-item div.top-newarrivals {
@@ -98,8 +97,7 @@ main {
 
 .product-item select {
     border: 2px solid black;
-    width: 55px;
-    padding: 4px;
+    width: 40px;
     border-radius: 4px;
 }
 

@@ -15,6 +15,8 @@ main ol {
 main h4 {
     margin: 2px 0px 2px 30px;
     font-family: "inter";
+    font-size: 17px;
+    font-weight: 900;
 }
 main p {
     margin: 2px 0px 2px 30px;

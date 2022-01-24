@@ -72,57 +72,68 @@ header {
     background-color: black;
 }
 
-header table .logo img {
+header .headerContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header div .logo img {
     width: 150px;
+}
+
+header .welcomeKhaos {
+    color: whitesmoke;
+    font-family: "inter";
+    letter-spacing: 1px;
+    margin: 0px;
+    flex-grow: 1;
 }
 
 header h1 {
-    color: whitesmoke;
-    font-family: "inter";
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 0px;
+    font-weight: bold;
+    margin-bottom: 0px;
 }
 
 header p {
-    color: whitesmoke
+    margin-bottom: 0px;
 }
 
-header table {
-    width: 100%;
+header .form-control {
+    border-radius: 7px;
 }
 
-header table .logo {
-    width: 150px;
+header .search {
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
-header table td.search form {
-    margin-left: auto;
-    padding-right: 10px;
-    width: 264px;
+header .btn {
+    border-radius: 7px; 
 }
 
-header table td.search form input {
-    font-family: "inter";
-}
-
-header table .carrito {
+header .carrito {
     font-family: "inter";
     font-size: 15px;
+    color: whitesmoke;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
-header table .carrito p,
-header table .carrito img {
+header .carrito p {
     display: inline-block;
 }
 
-header table .carrito img {
-    margin-bottom: -4px;
+header .carrito p,
+header .carrito i {
     cursor: pointer;
 }
 
 .footer {
     background-color: black;
+    text-align: left;
 }
 
 .footer-centrado {
@@ -131,32 +142,27 @@ header table .carrito img {
     margin: 0px auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 footer .redesSociales {
-    vertical-align: 0px;
-}
-
-footer .redesSociales img {
-    padding: 5px 30px 0px 0px;
     cursor: pointer;
-}
-
-footer .atencionClientes {
-    vertical-align: 0px;
+    color: whitesmoke;
+    font-size: 20px;
+    letter-spacing: 15px;
 }
 
 footer .newsletter {
-    vertical-align: 0px;
-    width: 50%;
+    width: 40%;
 }
 
 footer h5 {
     color: whitesmoke;
     font-family: "inter";
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
+    padding-top: 15px;
 }
 
 footer p {
@@ -188,6 +194,25 @@ footer #copyright {
 }
 
 @media only screen and (max-width:680px) {
+    
+    header .search {
+        display: none;
+    }
+
+    header .carrito {
+        padding-left: 0px;
+    }
+    
+    header .logo {
+        width: 100%;
+    }
+
+    header .logo img {
+        width: 120px;
+        margin: 0px auto;
+        display: block;
+    }
+
     header nav {
         background-color: rgb(220, 220, 220);
     }
@@ -219,49 +244,6 @@ footer #copyright {
         color: white;
     }
 
-    header table .logo img {
-        width: 120px;
-    }
-
-    header h1 {
-        color: whitesmoke;
-        font-size: 23px;
-        font-family: "inter";
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin: 0px;
-    }
-
-    header p {
-        color: whitesmoke
-    }
-
-    header table {
-        width: 100%;
-    }
-
-    header table .logo {
-        width: 100px;
-    }
-
-    header table td.search form {
-        margin-left: auto;
-        padding-right: 10px;
-        width: 264px;
-        display: none;
-    }
-
-    header table td.search form input {
-        font-family: "inter";
-        display: none;
-    }
-
-    header table .carrito {
-        font-family: "inter";
-        font-size: 14px;
-        padding-bottom: 0px;
-    }
-
     .footer-centrado {
         display: flex;
         flex-direction: column;
@@ -270,10 +252,7 @@ footer #copyright {
     footer .redesSociales {
         vertical-align: 0px;
         text-align: center;
-    }
-    
-    footer .redesSociales img {
-        padding: 5px 10px 0px 0px;
+        letter-spacing: 10px
     }
     
     footer .atencionClientes {
@@ -284,9 +263,19 @@ footer #copyright {
     footer .newsletter {
         margin: 0px auto;
         text-align: center;
+        width: 80%;
     }
   
     footer h5 {
         margin: 15px 0px 5px 0px;
+        font-size: 14px;
+    }
+
+    footer .form-control {
+        margin-top: 5px;
+    }
+
+    footer .btn {
+        margin-top: 5px;
     }
 }
