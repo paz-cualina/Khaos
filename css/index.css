@@ -4,12 +4,12 @@ body .body-wrapper {
                        "footer footer footer";
 }
 
-.img-wrapper {
+main .img-wrapper {
   max-height: 500px;
   overflow: hidden;
 }
 
-.img-container {
+main .img-container {
   max-height: inherit;
   transform: translateY(50%);
 }
@@ -95,6 +95,15 @@ main {
 
 main img {
   vertical-align: middle;
+}
+
+@media only screen and (max-width:1200px) {
+  .body-wrapper {
+      grid-template-columns: auto;
+      grid-template-areas: "header"
+                          "main"
+                          "footer";
+  }
 }
 
 @media only screen and (max-width:600px) {
