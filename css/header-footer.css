@@ -78,10 +78,12 @@ header .headerContent {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0px;
 }
 
 header .logo img {
-    width: 150px;
+    width: 110px;
+    padding-left: 20px;
 }
 
 header .welcomeKhaos {
@@ -94,6 +96,8 @@ header .welcomeKhaos {
 header h1 {
     font-weight: bold;
     margin-bottom: 0px;
+    line-height: 1.1;
+    font-size: 33px;
 }
 
 header p {
@@ -110,6 +114,7 @@ header .form-control:focus {
     background-color: black;
     border: 1px solid #afafaf;
     color: whitesmoke;
+    box-shadow: 0 0 0 0.25rem rgb(169 169 169 / 25%);
 }
 
 .btn-outline-secondary {
@@ -132,6 +137,8 @@ header .carrito {
     color: whitesmoke;
     padding-right: 40px;
     padding-left: 40px;
+    margin-bottom: 0px !important;
+    margin-left: auto;
 }
 
 header .carrito p {
@@ -141,6 +148,10 @@ header .carrito p {
 header .carrito p,
 header .carrito i {
     cursor: pointer;
+}
+
+header .input-group {
+    margin-bottom: 0px !important;
 }
 
 .footer {
@@ -178,6 +189,7 @@ footer .form-control:focus {
     background-color: black;
     border: 1px solid #afafaf;
     color: whitesmoke;
+    box-shadow: 0 0 0 0.25rem rgb(169 169 169 / 25%);
 }
 
 footer h5 {
@@ -207,24 +219,36 @@ footer #copyright {
     background-color: black;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:1200px) {
     .body-wrapper {
         grid-template-columns: auto;
-        grid-template-rows: auto;
         grid-template-areas: "header"
                             "main"
                             "footer";
     }
 }
 
+@media only screen and (max-width:1000px) {
+    header .input-group {
+        margin-bottom: 10px !important;
+    }
+
+    header .welcomeKhaos h1 {
+        font-size: 30px;
+    }
+}
+
 @media only screen and (max-width:680px) {
-    
-    header .welcomeKhaos {
-        padding-left: 30px;
+
+    header .welcomeKhaos h1 {
+        padding-left: 20px;
+        font-size: 25px;
+        line-height: 1;
     }
 
     header .carrito {
-        padding-left: 30px;
+        padding-left: 20px;
+        font-size: 12px;
     }
 
     header .search {
@@ -236,9 +260,11 @@ footer #copyright {
     }
 
     header .logo img {
-        width: 120px;
-        margin: 0px auto;
-        display: block;
+        display: none;
+    }
+
+    header .input-group {
+        margin-bottom: 10px !important;
     }
 
     header nav {
