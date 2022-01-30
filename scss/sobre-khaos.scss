@@ -1,0 +1,39 @@
+@import "./header-footer.scss";
+
+main {
+    margin: 0px;
+    font-family: "inter";
+    text-align: left;
+    background-color: white;
+    padding: 107px 0px;
+}
+
+main p {
+    margin: 2px 40px;
+    font-family: "inter";
+}
+
+main img {
+    width: 150px;
+    margin: 40px auto;
+    display: block;
+}
+
+@media only screen and (max-width:600px) {
+
+    main div {
+        width: 100%;
+        background-color: white;
+        margin: 0px auto;
+        padding: 50px 0px 70px 0px;
+    }
+    
+    main p {
+        margin: 2px 40px;
+    }
+
+    main div img {
+        width: 125px;
+    }
+
+}

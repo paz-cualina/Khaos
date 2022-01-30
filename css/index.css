@@ -1,53 +1,296 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: gainsboro; }
+
+.body-wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1000px) 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header" "vacio1 main vacio2" "footer footer footer"; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+header nav {
+  background-color: white; }
+
+header ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+
+header ul li {
+  display: inline-flex;
+  flex-grow: 1;
+  min-width: 120px;
+  max-width: 200px; }
+
+header ul li a {
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-family: "inter";
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 0px;
+  display: inline-block;
+  text-decoration: none; }
+
+header ul li a.activo,
+header ul li a:hover {
+  background-color: black;
+  color: whitesmoke; }
+
+.centrado {
+  margin: 0px auto; }
+
+header {
+  background-color: black; }
+
+header .headerContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px; }
+
+header .logo img {
+  width: 110px;
+  padding-left: 20px; }
+
+header .welcomeKhaos {
+  color: whitesmoke;
+  font-family: "inter";
+  letter-spacing: 1px;
+  flex-grow: 1; }
+
+header h1 {
+  font-weight: bold;
+  margin-bottom: 0px;
+  line-height: 1.1;
+  font-size: 33px; }
+
+header p {
+  margin-bottom: 0px; }
+
+header .form-control {
+  border-radius: 7px;
+  background-color: black;
+  border: 1px solid whitesmoke; }
+
+header .form-control:focus {
+  background-color: black;
+  border: 1px solid #afafaf;
+  color: whitesmoke;
+  box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, 0.25); }
+
+.btn-outline-secondary {
+  color: whitesmoke;
+  border-color: whitesmoke; }
+
+header .search {
+  padding-right: 40px;
+  padding-left: 40px; }
+
+header .btn {
+  border-radius: 7px; }
+
+header .carrito {
+  font-family: "inter";
+  font-size: 15px;
+  color: whitesmoke;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-bottom: 0px !important;
+  margin-left: auto; }
+
+header .carrito p {
+  display: inline-block; }
+
+header .carrito p,
+header .carrito i {
+  cursor: pointer; }
+
+header .input-group {
+  margin-bottom: 0px !important; }
+
+.footer {
+  background-color: black;
+  text-align: left; }
+
+.footer-centrado {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+footer .redesSociales {
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 20px;
+  letter-spacing: 15px; }
+
+footer .newsletter {
+  width: 40%; }
+
+footer .form-control {
+  border-radius: 7px;
+  background-color: black;
+  border: 1px solid whitesmoke; }
+
+footer .form-control:focus {
+  background-color: black;
+  border: 1px solid #afafaf;
+  color: whitesmoke;
+  box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, 0.25); }
+
+footer h5 {
+  color: whitesmoke;
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding-top: 15px; }
+
+footer p {
+  color: whitesmoke;
+  font-family: "inter";
+  font-size: 13px;
+  font-weight: 200;
+  margin: 7px 0px; }
+
+footer #copyright {
+  color: #d4d0d0;
+  font-family: "inter";
+  font-size: 12px;
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+  margin: 0px;
+  background-color: black; }
+
+@media only screen and (max-width: 1200px) {
+  .body-wrapper {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer"; } }
+
+@media only screen and (max-width: 1000px) {
+  header .input-group {
+    margin-bottom: 10px !important; }
+  header .welcomeKhaos h1 {
+    font-size: 30px; } }
+
+@media only screen and (max-width: 680px) {
+  header .welcomeKhaos h1 {
+    padding-left: 20px;
+    font-size: 25px;
+    line-height: 1; }
+  header .carrito {
+    padding-left: 20px;
+    font-size: 12px; }
+  header .search {
+    display: none; }
+  header .logo {
+    width: 100%; }
+  header .logo img {
+    display: none; }
+  header .input-group {
+    margin-bottom: 10px !important; }
+  header nav {
+    background-color: gainsboro; }
+  header ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  header ul li {
+    width: 100%;
+    max-width: 100%; }
+  header ul li a {
+    width: 100%;
+    font-size: 14px;
+    padding: 3px 0px; }
+  header ul li a.activo,
+  header ul li a:hover {
+    background-color: #b3b0b0;
+    color: white; }
+  .footer-centrado {
+    display: flex;
+    flex-direction: column; }
+  footer .redesSociales {
+    vertical-align: 0px;
+    text-align: center;
+    letter-spacing: 10px; }
+  footer .atencionClientes {
+    vertical-align: 0px;
+    text-align: center; }
+  footer .newsletter {
+    margin: 0px auto;
+    text-align: center;
+    width: 80%; }
+  footer h5 {
+    margin: 15px 0px 5px 0px;
+    font-size: 14px; }
+  footer .form-control {
+    margin-top: 5px; }
+  footer .btn {
+    margin-top: 5px; } }
+
 body .body-wrapper {
-  grid-template-areas: "header header header"
-                       "main main main"
-                       "footer footer footer";
-}
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
 
 main .img-wrapper {
   max-height: 500px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 main .img-container {
   max-height: inherit;
-  transform: translateY(50%);
-}
+  transform: translateY(50%); }
 
 .collection-new:hover {
   opacity: 0.8;
-  filter: grayscale(80%);
-}
+  filter: grayscale(80%); }
 
 #portada {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
 main .collection {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1000px;
-}
+  max-width: 1000px; }
 
 main .collection-element {
-  width: 50%;
-}
+  width: 50%; }
 
 main a.collection-element img {
-  width: 100%;
-}
+  width: 100%; }
 
 .promo {
   text-align: center;
-  background-color: rgb(184, 88, 88);
+  background-color: #b85858;
   width: 100%;
-  margin: 0px auto;
-}
+  margin: 0px auto; }
 
 .promo input {
   padding: 5px 70px;
@@ -59,14 +302,12 @@ main a.collection-element img {
   cursor: pointer;
   border: 0px;
   margin: 20px 0px 60px 0px;
-  border-radius: 4px;
-}
+  border-radius: 4px; }
 
 .promo input:hover {
-  background-color: rgb(51, 49, 49);
-  color:whitesmoke;
-  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
-}
+  background-color: #333131;
+  color: whitesmoke;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 main h2 {
   font-family: "inter";
@@ -75,54 +316,37 @@ main h2 {
   color: white;
   letter-spacing: 25px;
   padding: 60px 0px 3px 0px;
-  margin: 0px;
-}
+  margin: 0px; }
 
 main h3 {
   font-family: "inter";
   font-weight: 600;
   font-size: 16px;
-  color:white;
+  color: white;
   letter-spacing: 5px;
   padding: 3px 0px 0px 0px;
-  margin: 0px;
-}
+  margin: 0px; }
 
 main {
-  background-color: rgb(220, 220, 220);
-  margin: 0px;
-}
+  background-color: gainsboro;
+  margin: 0px; }
 
 main img {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   .body-wrapper {
-      grid-template-columns: auto;
-      grid-template-areas: "header"
-                          "main"
-                          "footer";
-  }
-}
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer"; } }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   main .collection {
-    flex-direction: column;
-  }
-  
+    flex-direction: column; }
   main .collection-element {
-    width: 100%;
-  }
-
+    width: 100%; }
   main h2 {
     font-size: 30px;
-    letter-spacing: 20px;
-  }
-
+    letter-spacing: 20px; }
   main h3 {
     font-size: 15px;
-    letter-spacing: 4px;
-  }
-
-}
+    letter-spacing: 4px; } }

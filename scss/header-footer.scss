@@ -114,7 +114,7 @@ header .form-control:focus {
     background-color: black;
     border: 1px solid #afafaf;
     color: whitesmoke;
-    box-shadow: 0 0 0 0.25rem rgb(169 169 169 / 25%);
+    box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, .25);
 }
 
 .btn-outline-secondary {
@@ -189,7 +189,7 @@ footer .form-control:focus {
     background-color: black;
     border: 1px solid #afafaf;
     color: whitesmoke;
-    box-shadow: 0 0 0 0.25rem rgb(169 169 169 / 25%);
+    box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, .25);
 }
 
 footer h5 {
