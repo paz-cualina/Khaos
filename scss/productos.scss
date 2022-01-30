@@ -55,7 +55,7 @@ main {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: black;
+    background-color: $primary-color;
 }
   
 .product-item div.top-newarrivals .text {
@@ -76,7 +76,7 @@ main {
 
 .product-item input.buttonCarrito {
     border: none;
-    background-color: black;
+    background-color: $primary-color;
     color: white;
     border-radius: 4px;
     padding: 8px 20px;
@@ -85,20 +85,20 @@ main {
 }
 
 .product-item input.buttonCarrito:hover {
-    background-color: rgb(184, 88, 88);
-    color: whitesmoke;
+    background-color: $tertiary-color;
+    color: $secondary-color;
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
 }
 
 .product-item input.buttonCantidad {
-    border: 2px solid black;
+    border: 2px solid $primary-color;
     width: 40px;
     padding: 6px;
     border-radius: 4px;
 }
 
 .product-item select {
-    border: 2px solid black;
+    border: 2px solid $primary-color;
     width: 40px;
     border-radius: 4px;
 }

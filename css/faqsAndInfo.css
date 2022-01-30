@@ -2,6 +2,8 @@ body {
   margin: 0px;
   padding: 0px;
   background-color: gainsboro; }
+  body * {
+    font-family: "inter"; }
 
 .body-wrapper {
   display: grid;
@@ -9,11 +11,14 @@ body {
   grid-template-rows: auto;
   grid-template-areas: "header header header" "vacio1 main vacio2" "footer footer footer"; }
 
+main {
+  grid-area: main; }
+
 header {
   grid-area: header;
   background-color: black; }
   header nav {
-    background-color: white; }
+    background-color: whitesmoke; }
   header ul {
     width: 100%;
     list-style-type: none;
@@ -31,7 +36,6 @@ header {
         width: 100%;
         color: black;
         text-align: center;
-        font-family: "inter";
         font-weight: 600;
         font-size: 16px;
         padding: 10px 0px;
@@ -59,7 +63,6 @@ header {
     padding-left: 20px; }
   header .welcomeKhaos {
     color: whitesmoke;
-    font-family: "inter";
     letter-spacing: 1px;
     flex-grow: 1; }
   header .form-control {
@@ -77,7 +80,6 @@ header {
   header .btn {
     border-radius: 7px; }
   header .carrito {
-    font-family: "inter";
     font-size: 15px;
     color: whitesmoke;
     padding-right: 40px;
@@ -92,12 +94,6 @@ header {
   header .input-group {
     margin-bottom: 0px !important; }
 
-main {
-  grid-area: main; }
-
-footer {
-  grid-area: footer; }
-
 .centrado {
   margin: 0px auto; }
 
@@ -105,61 +101,52 @@ footer {
   color: whitesmoke;
   border-color: whitesmoke; }
 
-.footer {
+footer {
+  grid-area: footer;
   background-color: black;
   text-align: left; }
-
-.footer-centrado {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-footer .redesSociales {
-  cursor: pointer;
-  color: whitesmoke;
-  font-size: 20px;
-  letter-spacing: 15px; }
-
-footer .newsletter {
-  width: 40%; }
-
-footer .form-control {
-  border-radius: 7px;
-  background-color: black;
-  border: 1px solid whitesmoke; }
-
-footer .form-control:focus {
-  background-color: black;
-  border: 1px solid #afafaf;
-  color: whitesmoke;
-  box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, 0.25); }
-
-footer h5 {
-  color: whitesmoke;
-  font-family: "inter";
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding-top: 15px; }
-
-footer p {
-  color: whitesmoke;
-  font-family: "inter";
-  font-size: 13px;
-  font-weight: 200;
-  margin: 7px 0px; }
-
-footer #copyright {
-  color: #d4d0d0;
-  font-family: "inter";
-  font-size: 12px;
-  text-align: center;
-  padding: 30px 0px 20px 0px;
-  margin: 0px;
-  background-color: black; }
+  footer .footer-centrado {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    footer .footer-centrado .redesSociales {
+      cursor: pointer;
+      color: whitesmoke;
+      font-size: 20px;
+      letter-spacing: 15px; }
+    footer .footer-centrado .newsletter {
+      width: 40%; }
+      footer .footer-centrado .newsletter .form-control {
+        border-radius: 7px;
+        background-color: black;
+        border: 1px solid whitesmoke; }
+        footer .footer-centrado .newsletter .form-control:focus {
+          background-color: black;
+          border: 1px solid #afafaf;
+          color: whitesmoke;
+          box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, 0.25); }
+    footer .footer-centrado h5,
+    footer .footer-centrado p {
+      color: whitesmoke; }
+    footer .footer-centrado h5 {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      padding-top: 15px; }
+    footer .footer-centrado p {
+      font-size: 13px;
+      font-weight: 200;
+      margin: 7px 0px; }
+  footer #copyright {
+    color: #d4d0d0;
+    font-size: 12px;
+    text-align: center;
+    padding: 30px 0px 20px 0px;
+    margin: 0px;
+    background-color: black; }
 
 @media only screen and (max-width: 1200px) {
   .body-wrapper {
@@ -192,7 +179,7 @@ footer #copyright {
         padding: 3px 0px; }
         header ul li a.activo, header ul li a:hover {
           background-color: #b3b0b0;
-          color: white; }
+          color: whitesmoke; }
   header .welcomeKhaos h1 {
     padding-left: 20px;
     font-size: 25px;
@@ -208,27 +195,27 @@ footer #copyright {
     display: none; }
   header .input-group {
     margin-bottom: 10px !important; }
-  .footer-centrado {
+  footer .footer-centrado {
     display: flex;
     flex-direction: column; }
-  footer .redesSociales {
-    vertical-align: 0px;
-    text-align: center;
-    letter-spacing: 10px; }
-  footer .atencionClientes {
-    vertical-align: 0px;
-    text-align: center; }
-  footer .newsletter {
-    margin: 0px auto;
-    text-align: center;
-    width: 80%; }
-  footer h5 {
-    margin: 15px 0px 5px 0px;
-    font-size: 14px; }
-  footer .form-control {
-    margin-top: 5px; }
-  footer .btn {
-    margin-top: 5px; } }
+    footer .footer-centrado .redesSociales {
+      vertical-align: 0px;
+      text-align: center;
+      letter-spacing: 10px; }
+    footer .footer-centrado .atencionClientes {
+      vertical-align: 0px;
+      text-align: center; }
+    footer .footer-centrado .newsletter {
+      margin: 0px auto;
+      text-align: center;
+      width: 80%; }
+    footer .footer-centrado h5 {
+      margin: 15px 0px 5px 0px;
+      font-size: 14px; }
+    footer .footer-centrado .form-control {
+      margin-top: 5px; }
+    footer .footer-centrado .btn {
+      margin-top: 5px; } }
 
 main {
   font-family: "inter";

@@ -28,7 +28,7 @@ main form label {
 }
 
 main form input {
-    border: 1px solid black;
+    border: 1px solid $primary-color;
     color:rgb(0, 0, 0);
     border-radius: 4px;
     padding: 5px 15px;
@@ -38,7 +38,7 @@ main form input {
 }
 
 main form input[type="submit"] {
-    background-color: black;
+    background-color: $primary-color;
     color: white;
     width: 70px;
 }
