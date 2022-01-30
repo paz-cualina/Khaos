@@ -15,6 +15,123 @@ body {
 
 header {
     grid-area: header;
+    background-color: black;
+
+    nav {
+        background-color: white;
+    }
+    
+    ul {
+        width: 100%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        li {
+            display: inline-flex;
+            flex-grow: 1;
+            min-width: 120px;
+            max-width: 200px;
+
+            a {
+                width: 100%;
+                color:black;
+                text-align: center;
+                font-family: "inter";
+                font-weight: 600;
+                font-size: 16px;
+                padding: 10px 0px;
+                display: inline-block;
+                text-decoration: none;
+
+                &.activo,
+                &:hover {
+                    background-color: black;
+                    color:whitesmoke;
+                }
+            }
+        }
+    }
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 0px;
+        line-height: 1.1;
+        font-size: 33px;
+    }
+    
+    p {
+        margin-bottom: 0px;
+    }
+
+    .headerContent {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px;
+    }
+    
+    .logo img {
+        width: 110px;
+        padding-left: 20px;
+    }
+    
+    .welcomeKhaos {
+        color: whitesmoke;
+        font-family: "inter";
+        letter-spacing: 1px;
+        flex-grow: 1;
+    }
+    
+    .form-control {
+        border-radius: 7px;
+        background-color: black;
+        border: 1px solid whitesmoke;
+
+        &:focus {
+            background-color: black;
+            border: 1px solid #afafaf;
+            color: whitesmoke;
+            box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, .25);
+        }
+    }
+
+    .search {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    
+    .btn {
+        border-radius: 7px; 
+    }
+    
+    .carrito {
+        font-family: "inter";
+        font-size: 15px;
+        color: whitesmoke;
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-bottom: 0px !important;
+        margin-left: auto;
+
+        p {
+            display: inline-block;
+        }
+        
+        p,
+        i {
+            cursor: pointer;
+        }
+    }
+    
+    .input-group {
+        margin-bottom: 0px !important;
+    }
 }
 
 main {
@@ -25,133 +142,13 @@ footer {
     grid-area: footer;
 }
 
-header nav {
-    background-color: white;
-}
-
-header ul {
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-header ul li {
-    display: inline-flex;
-    flex-grow: 1;
-    min-width: 120px;
-    max-width: 200px;
-}
-
-header ul li a {
-    width: 100%;
-    color:black;
-    text-align: center;
-    font-family: "inter";
-    font-weight: 600;
-    font-size: 16px;
-    padding: 10px 0px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-header ul li a.activo,
-header ul li a:hover {
-    background-color: black;
-    color:whitesmoke;
-}
-
 .centrado {
     margin: 0px auto;
-}
-
-header {
-    background-color: black;
-}
-
-header .headerContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-}
-
-header .logo img {
-    width: 110px;
-    padding-left: 20px;
-}
-
-header .welcomeKhaos {
-    color: whitesmoke;
-    font-family: "inter";
-    letter-spacing: 1px;
-    flex-grow: 1;
-}
-
-header h1 {
-    font-weight: bold;
-    margin-bottom: 0px;
-    line-height: 1.1;
-    font-size: 33px;
-}
-
-header p {
-    margin-bottom: 0px;
-}
-
-header .form-control {
-    border-radius: 7px;
-    background-color: black;
-    border: 1px solid whitesmoke;
-}
-
-header .form-control:focus {
-    background-color: black;
-    border: 1px solid #afafaf;
-    color: whitesmoke;
-    box-shadow: 0 0 0 0.25rem rgba(169, 169, 169, .25);
 }
 
 .btn-outline-secondary {
     color: whitesmoke;
     border-color: whitesmoke;
-}
-
-header .search {
-    padding-right: 40px;
-    padding-left: 40px;
-}
-
-header .btn {
-    border-radius: 7px; 
-}
-
-header .carrito {
-    font-family: "inter";
-    font-size: 15px;
-    color: whitesmoke;
-    padding-right: 40px;
-    padding-left: 40px;
-    margin-bottom: 0px !important;
-    margin-left: auto;
-}
-
-header .carrito p {
-    display: inline-block;
-}
-
-header .carrito p,
-header .carrito i {
-    cursor: pointer;
-}
-
-header .input-group {
-    margin-bottom: 0px !important;
 }
 
 .footer {
@@ -229,73 +226,76 @@ footer #copyright {
 }
 
 @media only screen and (max-width:1000px) {
-    header .input-group {
-        margin-bottom: 10px !important;
-    }
+    header {
+        .input-group {
+            margin-bottom: 10px !important;
+        }
 
-    header .welcomeKhaos h1 {
-        font-size: 30px;
+        .welcomeKhaos h1 {
+            font-size: 30px;
+        }
     }
 }
 
 @media only screen and (max-width:680px) {
+    header {
+        nav {
+            background-color: rgb(220, 220, 220);
+        }
 
-    header .welcomeKhaos h1 {
-        padding-left: 20px;
-        font-size: 25px;
-        line-height: 1;
-    }
+        ul {
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
 
-    header .carrito {
-        padding-left: 20px;
-        font-size: 12px;
-    }
+            li {
+                width: 100%;
+                max-width: 100%;
 
-    header .search {
-        display: none;
-    }
-    
-    header .logo {
-        width: 100%;
-    }
+                a {
+                    width: 100%;
+                    font-size: 14px;
+                    padding: 3px 0px;
 
-    header .logo img {
-        display: none;
-    }
+                    &.activo,
+                    &:hover {
+                        background-color: rgb(179, 176, 176);
+                        color: white;
+                    }
+                }
+            }
+        }
 
-    header .input-group {
-        margin-bottom: 10px !important;
-    }
+        .welcomeKhaos h1 {
+            padding-left: 20px;
+            font-size: 25px;
+            line-height: 1;
+        }
 
-    header nav {
-        background-color: rgb(220, 220, 220);
-    }
+        .carrito {
+            padding-left: 20px;
+            font-size: 12px;
+        }
 
-    header ul {
-        width: 100%;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
+        .search {
+            display: none;
+        }
+        
+        .logo {
+            width: 100%;
+        }
 
-    header ul li {
-        width: 100%;
-        max-width: 100%;
-    }
+        .logo img {
+            display: none;
+        }
 
-    header ul li a {
-        width: 100%;
-        font-size: 14px;
-        padding: 3px 0px;
-    }
-
-    header ul li a.activo,
-    header ul li a:hover {
-        background-color: rgb(179, 176, 176);
-        color: white;
+        .input-group {
+            margin-bottom: 10px !important;
+        }
     }
 
     .footer-centrado {
