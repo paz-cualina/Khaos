@@ -1,0 +1,135 @@
+@import "./header-footer.scss";
+
+.body-wrapper {
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+main {
+    background-color: rgb(220, 220, 220);
+    margin: 0px;
+
+    img {
+        vertical-align: middle;
+    }
+
+    .img-wrapper {
+        max-height: 500px;
+        overflow: hidden;
+
+        .img-container {
+            max-height: inherit;
+            transform: translateY(50%);
+
+            img#portada {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .collection {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: $max-width;
+
+        .collection-element {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+
+            .collection-new:hover {
+                opacity: 0.8;
+                filter: grayscale(80%);
+            }
+        }
+    }
+
+    .promo {
+        text-align: center;
+        background-color: $tertiary-color;
+        width: 100%;
+        margin: 0px auto;
+
+        input {
+            padding: 5px 70px;
+            color: $secondary-color;
+            font-family: "inter";
+            font-weight: 400;
+            letter-spacing: 1px;
+            background-color: $primary-color;
+            cursor: pointer;
+            border: 0px;
+            margin: 20px 0px 60px 0px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: rgb(51, 49, 49);
+                color: $secondary-color;
+                box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            }
+        }
+
+        h2 {
+            font-family: "inter";
+            font-weight: bold;
+            font-size: 35px;
+            color: white;
+            letter-spacing: 25px;
+            padding: 60px 0px 3px 0px;
+            margin: 0px;
+        }
+
+        h3 {
+            font-family: "inter";
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+            letter-spacing: 5px;
+            padding: 3px 0px 0px 0px;
+            margin: 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .body-wrapper {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        .collection {
+            flex-direction: column;
+
+            .collection-element {
+                width: 100%;
+            }
+        }
+
+        .promo {
+            h2 {
+                font-size: 28px;
+                letter-spacing: 18px;
+            }
+
+            h3 {
+                font-size: 15px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}

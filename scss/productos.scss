@@ -1,0 +1,110 @@
+@import "./header-footer.scss";
+
+main {
+    background-color: white;
+    margin: 0px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    font-family: "inter";
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.product-item div:not(.top-newarrivals) {
+    padding-top: 5px;
+}
+
+.product-item div.top-newarrivals {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+.product-item img {
+    width: inherit;
+    max-width: inherit;
+    margin-bottom: -4px;
+}
+
+.product-item div.top-newarrivals:hover .overlay {
+    opacity: .5;
+}
+
+.product-item div.top-newarrivals:active .overlay {
+    opacity: 0;
+}
+
+.product-item div.top-newarrivals .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $primary-color;
+}
+  
+.product-item div.top-newarrivals .text {
+    color: white;
+    font-family: "inter";
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.product-item div.top-newarrivals:active img {
+    transform: scale(2);
+    transform-origin: bottom;
+}
+
+.product-item input.buttonCarrito {
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-family: "inter";
+    cursor: pointer;
+}
+
+.product-item input.buttonCarrito:hover {
+    background-color: $tertiary-color;
+    color: $secondary-color;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+.product-item input.buttonCantidad {
+    border: 2px solid $primary-color;
+    width: 40px;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.product-item select {
+    border: 2px solid $primary-color;
+    width: 40px;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width:600px) {
+    .product-item div.top-newarrivals:hover .overlay {
+        opacity: 0;
+    }
+}

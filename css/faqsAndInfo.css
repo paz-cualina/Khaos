@@ -218,28 +218,34 @@ footer {
       margin-top: 5px; } }
 
 main {
-  margin: 0px;
   font-family: "inter";
   text-align: left;
   background-color: white;
-  padding: 107px 0px; }
+  margin: 0px;
+  padding: 70px 0px; }
+
+main ol {
+  text-align: left;
+  padding: 0px;
+  margin: 2px 0px 2px 50px; }
+
+main h4 {
+  margin: 2px 0px 2px 30px;
+  font-family: "inter";
+  font-size: 17px;
+  font-weight: 900; }
 
 main p {
-  margin: 2px 40px;
+  margin: 2px 0px 2px 30px;
   font-family: "inter"; }
 
-main img {
-  width: 150px;
-  margin: 40px auto;
-  display: block; }
-
 @media only screen and (max-width: 600px) {
-  main div {
+  main div.fondo {
     width: 100%;
-    background-color: white;
-    margin: 0px auto;
-    padding: 50px 0px 70px 0px; }
-  main p {
+    padding: 60px 0px; }
+  main ol {
+    margin: 2px 60px; }
+  main h4 {
     margin: 2px 40px; }
-  main div img {
-    width: 125px; } }
+  main p {
+    margin: 2px 40px; } }
