@@ -1,4 +1,4 @@
-@import "./header-footer.scss";
+@import "./_header-footer.scss";
 
 .body-wrapper {
     grid-template-areas:
@@ -8,7 +8,7 @@
 }
 
 main {
-    background-color: rgb(220, 220, 220);
+    background-color: $empty-background;
     margin: 0px;
 
     img {
@@ -82,7 +82,7 @@ main {
             font-family: "inter";
             font-weight: bold;
             font-size: 35px;
-            color: white;
+            color: $secondary-color;
             letter-spacing: 25px;
             padding: 60px 0px 3px 0px;
             margin: 0px;
@@ -92,7 +92,7 @@ main {
             font-family: "inter";
             font-weight: 600;
             font-size: 16px;
-            color: white;
+            color: $secondary-color;
             letter-spacing: 5px;
             padding: 3px 0px 0px 0px;
             margin: 0px;

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/index.scss css/index.css && node-sass --include-path scss scss/productos.scss css/productos.css && node-sass --include-path scss scss/faqsAndInfo.scss css/faqsAndInfo.css && node-sass --include-path scss scss/sobre-khaos.scss css/sobre-khaos.css && node-sass --include-path scss scss/contacto.scss css/contacto.css",
+    "build-css": "node-sass --include-path scss scss/_index.scss css/index.css && node-sass --include-path scss scss/_productos.scss css/productos.css && node-sass --include-path scss scss/_faqsAndInfo.scss css/faqsAndInfo.css && node-sass --include-path scss scss/_sobre-khaos.scss css/sobre-khaos.css && node-sass --include-path scss scss/_contacto.scss css/contacto.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
