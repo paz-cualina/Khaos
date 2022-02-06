@@ -1,0 +1,113 @@
+@import "./_header-footer.scss";
+
+main {
+    background-color: $background-color;
+    margin: 0px;
+
+    .products {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .product-item {
+            font-family: "inter";
+            font-weight: 600;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 40px;
+
+            select {
+                border: 2px solid $primary-color;
+                width: 40px;
+                border-radius: 4px;
+            }
+
+            img {
+                width: inherit;
+                max-width: inherit;
+                margin-bottom: -4px;
+            }
+
+            div:not(.top-newarrivals) {
+                padding-top: 5px;
+            }
+
+            div.top-newarrivals {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                max-width: 400px;
+                cursor: pointer;
+
+                &:hover .overlay {
+                    opacity: 0.5;
+                }
+
+                &:active {
+                    .overlay {
+                        opacity: 0;
+                    }
+
+                    img {
+                        transform: scale(2);
+                        transform-origin: bottom;
+                    }
+                }
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0;
+                    transition: 0.5s ease;
+                    background-color: $primary-color;
+                }
+
+                .text {
+                    color: $secondary-color;
+                    font-family: "inter";
+                    font-size: 17px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+
+            input.buttonCarrito {
+                border: none;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-radius: 4px;
+                padding: 8px 20px;
+                font-family: "inter";
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $tertiary-color;
+                    color: $secondary-color;
+                    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+
+            input.buttonCantidad {
+                border: 2px solid $primary-color;
+                width: 40px;
+                padding: 6px;
+                border-radius: 4px;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .product-item div.top-newarrivals:hover .overlay {
+        opacity: 0;
+    }
+}
