@@ -1,16 +1,25 @@
-$primary-color: black;
-$secondary-color: whitesmoke;
-$tertiary-color: rgb(184, 88, 88);
-$background-color: white;
-$empty-background: rgb(220, 220, 220);
 $border-color-focus: #afafaf;
 $box-shadow-color: rgba(169, 169, 169, 0.25);
 $max-width: 1000px;
 
+$theme-principal: (
+    primary-color: black,
+    secondary-color: whitesmoke,
+    tertiary-color: rgb(184, 88, 88),
+    background-color: white,
+    empty-background: rgb(220, 220, 220),
+);
+
+@mixin font-style($size, $weight) {
+    font-family: "inter";
+    font-size: $size;
+    font-weight: $weight;
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    background-color: $empty-background;
+    background-color: map-get($theme-principal, empty-background);
 
     * {
         font-family: "inter";
@@ -33,12 +42,12 @@ main {
 
 header {
     grid-area: header;
-    background-color: $primary-color;
+    background-color: map-get($theme-principal, primary-color);
     box-shadow: 0px 1px 10px grey;
     z-index: 100;
 
     nav {
-        background-color: $empty-background;
+        background-color: map-get($theme-principal, empty-background);
     }
 
     ul {
@@ -57,19 +66,18 @@ header {
             max-width: 200px;
 
             a {
+                @include font-style(16px, 600);
                 width: 100%;
-                color: $primary-color;
+                color: map-get($theme-principal, primary-color);
                 text-align: center;
-                font-weight: 600;
-                font-size: 16px;
                 padding: 10px 0px;
                 display: inline-block;
                 text-decoration: none;
 
                 &.activo,
                 &:hover {
-                    background-color: $primary-color;
-                    color: $secondary-color;
+                    background-color: map-get($theme-principal, primary-color);
+                    color: map-get($theme-principal, secondary-color);
                 }
             }
         }
@@ -101,20 +109,20 @@ header {
     }
 
     .welcomeKhaos {
-        color: $secondary-color;
+        color: map-get($theme-principal, secondary-color);
         letter-spacing: 1px;
         flex-grow: 1;
     }
 
     .form-control {
         border-radius: 7px;
-        background-color: $primary-color;
-        border: 1px solid $secondary-color;
+        background-color: map-get($theme-principal, primary-color);
+        border: 1px solid map-get($theme-principal, secondary-color);
 
         &:focus {
-            background-color: $primary-color;
+            background-color: map-get($theme-principal, primary-color);
             border: 1px solid $border-color-focus;
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
             box-shadow: 0 0 0 0.25rem $box-shadow-color;
         }
     }
@@ -130,7 +138,7 @@ header {
 
     .carrito {
         font-size: 15px;
-        color: $secondary-color;
+        color: map-get($theme-principal, secondary-color);
         padding-right: 40px;
         padding-left: 40px;
         margin-bottom: 0px !important;
@@ -156,26 +164,27 @@ header {
 }
 
 .btn-outline-secondary {
-    color: $secondary-color;
-    border-color: $secondary-color;
+    color: map-get($theme-principal, secondary-color);
+    border-color: map-get($theme-principal, secondary-color);
 }
 
 footer {
     grid-area: footer;
-    background-color: $primary-color;
+    background-color: map-get($theme-principal, primary-color);
     text-align: left;
 
     .footer-centrado {
+        @extend .centrado;
+
         width: 100%;
         max-width: $max-width;
-        margin: 0px auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
         .redesSociales {
             cursor: pointer;
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
             font-size: 20px;
             letter-spacing: 15px;
         }
@@ -185,13 +194,13 @@ footer {
 
             .form-control {
                 border-radius: 7px;
-                background-color: $primary-color;
-                border: 1px solid $secondary-color;
+                background-color: map-get($theme-principal, primary-color);
+                border: 1px solid map-get($theme-principal, secondary-color);
 
                 &:focus {
-                    background-color: $primary-color;
+                    background-color: map-get($theme-principal, primary-color);
                     border: 1px solid $border-color-focus;
-                    color: $secondary-color;
+                    color: map-get($theme-principal, secondary-color);
                     box-shadow: 0 0 0 0.25rem $box-shadow-color;
                 }
             }
@@ -199,19 +208,17 @@ footer {
 
         h5,
         p {
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
         }
 
         h5 {
-            font-size: 16px;
-            font-weight: 600;
+            @include font-style(16px, 600);
             letter-spacing: 2px;
             padding-top: 15px;
         }
 
         p {
-            font-size: 13px;
-            font-weight: 200;
+            @include font-style(13px, 200);
             margin: 7px 0px;
         }
     }
@@ -222,7 +229,7 @@ footer {
         text-align: center;
         padding: 30px 0px 20px 0px;
         margin: 0px;
-        background-color: $primary-color;
+        background-color: map-get($theme-principal, primary-color);
     }
 }
 
@@ -271,7 +278,7 @@ footer {
                     &.activo,
                     &:hover {
                         background-color: rgb(179, 176, 176);
-                        color: $secondary-color;
+                        color: map-get($theme-principal, secondary-color);
                     }
                 }
             }

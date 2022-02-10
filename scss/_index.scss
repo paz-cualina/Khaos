@@ -8,7 +8,7 @@
 }
 
 main {
-    background-color: $empty-background;
+    background-color: map-get($theme-principal, empty-background);
     margin: 0px;
 
     img {
@@ -34,6 +34,8 @@ main {
     }
 
     .collection {
+        @extend .centrado;
+        
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -64,17 +66,17 @@ main {
 
     .promo {
         text-align: center;
-        background-color: $tertiary-color;
+        background-color: map-get($theme-principal, tertiary-color);
         width: 100%;
         margin: 0px auto;
 
         input {
             padding: 5px 70px;
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
             font-family: "inter";
             font-weight: 400;
             letter-spacing: 1px;
-            background-color: $primary-color;
+            background-color: map-get($theme-principal, primary-color);
             cursor: pointer;
             border: 0px;
             margin: 20px 0px 60px 0px;
@@ -82,7 +84,7 @@ main {
 
             &:hover {
                 background-color: rgb(51, 49, 49);
-                color: $secondary-color;
+                color: map-get($theme-principal, secondary-color);
                 box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             }
         }
@@ -91,7 +93,7 @@ main {
             font-family: "inter";
             font-weight: bold;
             font-size: 35px;
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
             letter-spacing: 25px;
             padding: 60px 0px 3px 0px;
             margin: 0px;
@@ -101,7 +103,7 @@ main {
             font-family: "inter";
             font-weight: 600;
             font-size: 16px;
-            color: $secondary-color;
+            color: map-get($theme-principal, secondary-color);
             letter-spacing: 5px;
             padding: 3px 0px 0px 0px;
             margin: 0px;

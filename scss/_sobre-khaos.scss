@@ -4,7 +4,7 @@ main {
     margin: 0px;
     font-family: "inter";
     text-align: left;
-    background-color: $background-color;
+    background-color: map-get($theme-principal, background-color);
     padding: 107px 0px;
 
     p {
