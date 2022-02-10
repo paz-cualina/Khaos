@@ -35,11 +35,12 @@ header {
       min-width: 120px;
       max-width: 200px; }
       header ul li a {
+        font-family: "inter";
+        font-size: 16px;
+        font-weight: 600;
         width: 100%;
         color: black;
         text-align: center;
-        font-weight: 600;
-        font-size: 16px;
         padding: 10px 0px;
         display: inline-block;
         text-decoration: none; }
@@ -96,7 +97,7 @@ header {
   header .input-group {
     margin-bottom: 0px !important; }
 
-.centrado {
+.centrado, footer .footer-centrado {
   margin: 0px auto; }
 
 .btn-outline-secondary {
@@ -110,7 +111,6 @@ footer {
   footer .footer-centrado {
     width: 100%;
     max-width: 1000px;
-    margin: 0px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
@@ -134,11 +134,13 @@ footer {
     footer .footer-centrado p {
       color: whitesmoke; }
     footer .footer-centrado h5 {
+      font-family: "inter";
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 2px;
       padding-top: 15px; }
     footer .footer-centrado p {
+      font-family: "inter";
       font-size: 13px;
       font-weight: 200;
       margin: 7px 0px; }
@@ -228,10 +230,10 @@ main {
     padding: 0px;
     margin: 2px 0px 2px 50px; }
   main h4 {
-    margin: 2px 0px 2px 30px;
     font-family: "inter";
     font-size: 17px;
-    font-weight: 900; }
+    font-weight: 900;
+    margin: 2px 0px 2px 30px; }
   main p {
     margin: 2px 0px 2px 30px;
     font-family: "inter"; }

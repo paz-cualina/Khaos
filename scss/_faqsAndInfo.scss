@@ -3,7 +3,7 @@
 main {
     font-family: "inter";
     text-align: left;
-    background-color: $background-color;
+    background-color: map-get($theme-principal, background-color);
     margin: 0px;
     padding: 70px 0px;
 
@@ -14,10 +14,8 @@ main {
     }
     
     h4 {
+        @include font-style(17px, 900);
         margin: 2px 0px 2px 30px;
-        font-family: "inter";
-        font-size: 17px;
-        font-weight: 900;
     }
 
     p {
