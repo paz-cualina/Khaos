@@ -1,10 +1,11 @@
 @import "./_header-footer.scss";
 
 .body-wrapper {
+    grid-template-columns: auto;
     grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
+        "header"
+        "main"
+        "footer";
 }
 
 main {
@@ -50,11 +51,6 @@ main {
 
             .collection-new {
                 max-height: inherit;
-
-                img {
-                    width: 100%;
-                    transform: translateY(-5%);
-                }
 
                 &:hover {
                     opacity: 0.9;
@@ -111,16 +107,6 @@ main {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    .body-wrapper {
-        grid-template-columns: auto;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-}
-
 @media only screen and (max-width: 600px) {
     main {
         .collection {
@@ -128,7 +114,11 @@ main {
 
             .collection-element {
                 width: 100%;
-            }
+
+                .collection-new {
+                    width: 100%;
+                }
+            } 
         }
 
         .promo {

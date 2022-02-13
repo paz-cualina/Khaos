@@ -29,11 +29,12 @@ body {
 .body-wrapper {
     display: grid;
     grid-template-columns: 1fr minmax(auto, $max-width) 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 154px auto 210px;
     grid-template-areas:
         "header header header"
         "vacio1 main vacio2"
         "footer footer footer";
+    min-height: 100vh;
 }
 
 main {
@@ -243,7 +244,11 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1101px) {
+    .body-wrapper {
+        grid-template-rows: 202px auto 230px;
+    }
+
     header {
         .input-group {
             margin-bottom: 10px !important;
@@ -252,10 +257,24 @@ footer {
         .welcomeKhaos h1 {
             font-size: 30px;
         }
+
+        .search {
+            width: 50%;
+            order: 4;
+            margin-left: auto;
+        }
+    }
+
+    footer .footer-centrado {
+        justify-content: space-around;
     }
 }
 
 @media only screen and (max-width: 680px) {
+    .body-wrapper {
+        grid-template-rows: 205px auto 414px;
+    }
+
     header {
         ul {
             width: 100%;
@@ -347,5 +366,15 @@ footer {
                 margin-top: 5px;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .body-wrapper {
+        grid-template-rows: 223px auto 414px;
+    }
+
+    header .welcomeKhaos {
+        width: 100%;
     }
 }
