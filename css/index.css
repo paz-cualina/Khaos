@@ -232,7 +232,7 @@ footer {
 
 @media only screen and (max-width: 480px) {
   .body-wrapper {
-    grid-template-rows: 223px auto 230px; }
+    grid-template-rows: 223px auto 414px; }
   header .welcomeKhaos {
     width: 100%; } }
 
@@ -315,6 +315,8 @@ main {
     flex-direction: column; }
     main .collection .collection-element {
       width: 100%; }
+      main .collection .collection-element .collection-new {
+        width: 100%; }
   main .promo h2 {
     font-size: 28px;
     letter-spacing: 18px; }
