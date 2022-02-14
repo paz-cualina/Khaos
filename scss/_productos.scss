@@ -1,6 +1,4 @@
-@import "./_header-footer.scss";
-
-main {
+.productos main {
     background-color: map-get($theme-principal, background-color);
     margin: 0px;
 
@@ -107,7 +105,7 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    .product-item div.top-newarrivals:hover .overlay {
+    .productos .product-item div.top-newarrivals:hover .overlay {
         opacity: 0;
     }
 }
