@@ -1,135 +1,137 @@
-@import "./_header-footer.scss";
-
-.body-wrapper {
-    grid-template-columns: auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
-}
-
-main {
-    background-color: map-get($theme-principal, empty-background);
-    margin: 0px;
-
-    img {
-        vertical-align: middle;
+.home {
+    .body-wrapper {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
     }
 
-    .img-wrapper {
-        max-height: 500px;
-        overflow: hidden;
+    main {
+        background-color: map-get($theme-principal, empty-background);
+        margin: 0px;
 
-        .img-container {
-            max-height: inherit;
-            transform: translateY(50%);
-
-            img#portada {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 100%;
-                transform: translateY(-50%);
-            }
+        img {
+            vertical-align: middle;
         }
-    }
 
-    .collection {
-        @extend .centrado;
-        
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        max-width: $max-width;
-        box-shadow: 0px 1px 25px grey;
-        z-index: 100;
-
-        .collection-element {
-            width: 50%;
+        .img-wrapper {
             max-height: 500px;
             overflow: hidden;
 
-            .collection-new {
+            .img-container {
                 max-height: inherit;
+                transform: translateY(50%);
 
-                &:hover {
-                    opacity: 0.9;
-                    filter: grayscale(80%);
+                img#portada {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 100%;
+                    transform: translateY(-50%);
                 }
             }
         }
-    }
 
-    .promo {
-        text-align: center;
-        background-color: map-get($theme-principal, tertiary-color);
-        width: 100%;
-        margin: 0px auto;
+        .collection {
+            @extend .centrado;
 
-        input {
-            padding: 5px 70px;
-            color: map-get($theme-principal, secondary-color);
-            font-family: "inter";
-            font-weight: 400;
-            letter-spacing: 1px;
-            background-color: map-get($theme-principal, primary-color);
-            cursor: pointer;
-            border: 0px;
-            margin: 20px 0px 60px 0px;
-            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: $max-width;
+            box-shadow: 0px 1px 25px grey;
+            z-index: 100;
 
-            &:hover {
-                background-color: rgb(51, 49, 49);
-                color: map-get($theme-principal, secondary-color);
-                box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            .collection-element {
+                width: 50%;
+                max-height: 500px;
+                overflow: hidden;
+
+                .collection-new {
+                    max-height: inherit;
+
+                    &:hover {
+                        opacity: 0.9;
+                        filter: grayscale(80%);
+                    }
+                }
             }
         }
 
-        h2 {
-            font-family: "inter";
-            font-weight: bold;
-            font-size: 35px;
-            color: map-get($theme-principal, secondary-color);
-            letter-spacing: 25px;
-            padding: 60px 0px 3px 0px;
-            margin: 0px;
-        }
+        .promo {
+            text-align: center;
+            background-color: map-get($theme-principal, tertiary-color);
+            width: 100%;
+            margin: 0px auto;
 
-        h3 {
-            font-family: "inter";
-            font-weight: 600;
-            font-size: 16px;
-            color: map-get($theme-principal, secondary-color);
-            letter-spacing: 5px;
-            padding: 3px 0px 0px 0px;
-            margin: 0px;
+            input {
+                padding: 5px 70px;
+                color: map-get($theme-principal, secondary-color);
+                font-family: "inter";
+                font-weight: 400;
+                letter-spacing: 1px;
+                background-color: map-get($theme-principal, primary-color);
+                cursor: pointer;
+                border: 0px;
+                margin: 20px 0px 60px 0px;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: rgb(51, 49, 49);
+                    color: map-get($theme-principal, secondary-color);
+                    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+
+            h2 {
+                font-family: "inter";
+                font-weight: bold;
+                font-size: 35px;
+                color: map-get($theme-principal, secondary-color);
+                letter-spacing: 25px;
+                padding: 60px 0px 3px 0px;
+                margin: 0px;
+            }
+
+            h3 {
+                font-family: "inter";
+                font-weight: 600;
+                font-size: 16px;
+                color: map-get($theme-principal, secondary-color);
+                letter-spacing: 5px;
+                padding: 3px 0px 0px 0px;
+                margin: 0px;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
-    main {
-        .collection {
-            flex-direction: column;
+    .home {
+        main {
+            .collection {
+                flex-direction: column;
 
-            .collection-element {
-                width: 100%;
-
-                .collection-new {
+                .collection-element {
                     width: 100%;
-                }
-            } 
-        }
 
-        .promo {
-            h2 {
-                font-size: 28px;
-                letter-spacing: 18px;
+                    .collection-new {
+                        width: 100%;
+                    }
+                }
             }
 
-            h3 {
-                font-size: 15px;
-                letter-spacing: 4px;
+            .promo {
+                h2 {
+                    font-size: 28px;
+                    letter-spacing: 18px;
+                }
+
+                h3 {
+                    font-size: 15px;
+                    letter-spacing: 4px;
+                }
             }
         }
     }
