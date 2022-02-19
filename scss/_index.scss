@@ -38,6 +38,8 @@
             letter-spacing: 1px;
             text-align: center;
             color: #cecaca;
+            position: relative;
+            z-index: 100;
 
             h3 {
                 @include font-style(16px, 700);
@@ -63,7 +65,6 @@
             width: 100%;
             max-width: $max-width;
             box-shadow: 0px 1px 25px grey;
-            z-index: 100;
 
             .collection-element {
                 width: 50%;

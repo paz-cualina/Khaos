@@ -261,7 +261,9 @@ footer {
     background-color: black;
     letter-spacing: 1px;
     text-align: center;
-    color: #cecaca; }
+    color: #cecaca;
+    position: relative;
+    z-index: 100; }
     .home main .collection-title h3 {
       font-family: "inter";
       font-size: 16px;
@@ -282,8 +284,7 @@ footer {
     flex-direction: row;
     width: 100%;
     max-width: 1000px;
-    box-shadow: 0px 1px 25px grey;
-    z-index: 100; }
+    box-shadow: 0px 1px 25px grey; }
     .home main .collection .collection-element {
       width: 50%;
       max-height: 500px;
