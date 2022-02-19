@@ -360,6 +360,9 @@ footer {
         .productos main .products .product-item div.top-newarrivals:active img {
           transform: scale(2);
           transform-origin: bottom; }
+          .productos main .products .product-item div.top-newarrivals:active img.center-zoom {
+            transform: scale(2);
+            transform-origin: 50% 30%; }
         .productos main .products .product-item div.top-newarrivals .overlay {
           position: absolute;
           top: 0;
