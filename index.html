@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <link rel="icon" type="image/png" href="./imagen/logo favicon.png" sizes="32x32">
     <title>Khaos - Moda Alternativa</title>
 </head>
+
 <body class="home">
     <div class="body-wrapper">
         <header>
@@ -31,7 +33,8 @@
                 </div>
                 <div class="search">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Búsqueda" aria-describedby="button-addon2">
+                        <input type="text" class="form-control" placeholder="Búsqueda" aria-label="Búsqueda"
+                            aria-describedby="button-addon2">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
                     </div>
                 </div>
@@ -60,12 +63,43 @@
                     </li>
                 </ul>
             </nav>
-        </header>   
+        </header>
 
         <main>
             <div class="img-wrapper">
                 <div class="img-container">
-                    <img src="./imagen/khaosprincipal-recortada.jpg" id="portada" alt="imagen-principal">
+                    <!-- <img src="./imagen/khaosprincipal-recortada.jpg" id="portada" alt="imagen-principal"> -->
+                    <div id="portada" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#portada" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#portada" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#portada" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagen/khaosprincipal-recortada.jpg" class="d-block w-100" alt="khaosprincipal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagen/UndergroundStairs-wallpaper.png" class="d-block w-100" alt="khaosprincipal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagen/logo-pared.png" class="d-block w-100" alt="khaosprincipal">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#portada"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#portada"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -102,11 +136,12 @@
                     <div class="newsletter">
                         <h5>NEWSLETTER</h5>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="ejemplo@mail.com" aria-label="ejemplo@mail.com" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="ejemplo@mail.com"
+                                aria-label="ejemplo@mail.com" aria-describedby="button-addon2">
                             <button class="btn btn-outline-secondary" type="button" id="button-addon2">Enviar</button>
                         </div>
-                        <p>Si quieres recibir nuestras últimas novedades suscríbete a nuestro newsletter semanal. 
-                        Podrás darte de baja en cualquier momento.</p>
+                        <p>Si quieres recibir nuestras últimas novedades suscríbete a nuestro newsletter semanal.
+                            Podrás darte de baja en cualquier momento.</p>
                     </div>
                 </div>
             </div>
@@ -114,4 +149,5 @@
         </footer>
     </div>
 </body>
+
 </html>

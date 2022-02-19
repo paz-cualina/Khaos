@@ -47,8 +47,11 @@
                     }
 
                     img {
-                        transform: scale(2);
-                        transform-origin: bottom;
+                        @include zoom(bottom);
+
+                        &.center-zoom {
+                            @include zoom(50% 30%);
+                        }
                     }
                 }
 

@@ -16,6 +16,11 @@ $theme-principal: (
     font-weight: $weight;
 }
 
+@mixin zoom($origin) {
+    transform: scale(2);
+    transform-origin: $origin;
+}
+
 body {
     margin: 0px;
     padding: 0px;
