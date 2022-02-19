@@ -288,12 +288,37 @@ footer {
     .home main .collection .collection-element {
       width: 50%;
       max-height: 500px;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
+      .home main .collection .collection-element:hover .collection-new {
+        opacity: 0.9;
+        filter: grayscale(80%); }
+      .home main .collection .collection-element:hover .overlay {
+        opacity: 0.65; }
       .home main .collection .collection-element .collection-new {
-        max-height: inherit; }
-        .home main .collection .collection-element .collection-new:hover {
-          opacity: 0.9;
-          filter: grayscale(80%); }
+        max-height: inherit;
+        transition: 0.5s ease; }
+      .home main .collection .collection-element .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: black; }
+        .home main .collection .collection-element .overlay .text {
+          color: whitesmoke;
+          font-family: "inter";
+          font-size: 15px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          letter-spacing: 1; }
   .home main .promo {
     text-align: center;
     background-color: #b85858;
@@ -476,24 +501,23 @@ footer {
   font-family: "inter";
   text-align: left;
   background-color: white;
-  padding: 107px 0px; }
+  padding: 0px 0px; }
+  .sobre-khaos main .sobreKhaos-text {
+    margin: 50px auto; }
   .sobre-khaos main p {
     margin: 2px 40px;
     font-family: "inter"; }
   .sobre-khaos main img {
-    width: 150px;
-    margin: 40px auto;
+    max-width: 100%;
+    margin: 0px auto;
     display: block; }
 
 @media only screen and (max-width: 600px) {
   .sobre-khaos main {
     width: 100%;
-    margin: 0px auto;
-    padding: 50px 0px 70px 0px; }
+    margin: 0px auto; }
     .sobre-khaos main p {
-      margin: 2px 40px; }
-    .sobre-khaos main img {
-      width: 125px; } }
+      margin: 2px 40px; } }
 
 .contacto main {
   background-color: white;
