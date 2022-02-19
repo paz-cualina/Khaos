@@ -3,25 +3,34 @@
     text-align: left;
     background-color: map-get($theme-principal, background-color);
     margin: 0px;
-    padding: 70px 0px;
 
-    ol {
-        text-align: left;
-        padding: 0px;
-        margin: 2px 0px 2px 50px;
-    }
+    .textFaqs {
+        padding: 60px 0;
+
+        ol {
+            text-align: left;
+            padding: 0px;
+            margin: 2px 0px 2px 50px;
+        }
+        
+        h4 {
+            @include font-style(17px, 900);
+            margin: 2px 0px 2px 30px;
+        }
     
-    h4 {
-        @include font-style(17px, 900);
-        margin: 2px 0px 2px 30px;
+        p {
+            margin: 2px 0px 2px 30px;
+            font-family: "inter";
+        }
     }
 
-    p {
-        margin: 2px 0px 2px 30px;
-        font-family: "inter";
+    .khaos-faqsAndInfo img {
+        max-width: 100%;
+        margin: 0px auto;
+        position: relative;
+        z-index: 100;
     }
 }
-
 
 
 @media only screen and (max-width:600px) {

@@ -1,53 +1,51 @@
-.contacto {
-    main {
+.contacto main {
         background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-    }
 
-    main form {
+   form {
         @include font-style(14px, 600);
         padding: 20px 40px;
     }
 
-    main form legend {
+    form legend {
         @include font-style(15px, 700);
         padding: 30px 0px;
     }
 
-    main form label {
+    form label {
         font-weight: 600;
         color: rgb(0, 0, 0);
         display: block;
         padding-bottom: 5px;
     }
 
-    main form input {
+    form input {
         border: 1px solid map-get($theme-principal, primary-color);
         color: rgb(0, 0, 0);
         border-radius: 4px;
         padding: 5px 15px;
-        max-width: 350px;
+        max-width: 410px;
         width: 100%;
         margin-bottom: 10px;
     }
 
-    main form input[type="submit"] {
+    form input[type="submit"] {
         background-color: map-get($theme-principal, primary-color);
         color: white;
         width: 70px;
     }
 
-    main form input[type="submit"]:hover {
+    form input[type="submit"]:hover {
         background-color: rgb(51, 49, 49);
         color: whitesmoke;
         box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
 
-    main form textarea {
-        max-width: 350px;
+    form textarea {
+        max-width: 410px;
         width: 100%;
         display: block;
         border-radius: 4px;
@@ -55,49 +53,47 @@
         margin-bottom: 10px;
     }
 
-    main .contacto-info h3 {
+    .contacto-info h3 {
         @include font-style(18px, 700);
         letter-spacing: 1px;
         margin-top: 35px;
     }
 
-    main .contacto-info h4 {
+    .contacto-info h4 {
         @include font-style(15px, 600);
         margin-top: 30px;
     }
 
-    main .contacto-info {
+    .contacto-info {
         text-align: center;
-        padding-top: 120px;
+        padding-top: 100px;
         flex-grow: 1;
     }
 
-    main .contacto-info p {
+    .contacto-info p {
         @include font-style(14px, 500);
         margin-bottom: 10px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .contacto {
-        main {
+    .contacto main {
             flex-direction: column;
-        }
-
-        main .contacto-info h3 {
+      
+        .contacto-info h3 {
             margin-top: 20px;
         }
 
-        main .contacto-info h4 {
+        .contacto-info h4 {
             margin-top: 20px;
             margin-bottom: 40px;
         }
 
-        main .contacto-info {
+        .contacto-info {
             padding-top: 0px;
         }
 
-        main .contacto-info p {
+        .contacto-info p {
             font-size: 14px;
             margin-bottom: 10px;
         }
