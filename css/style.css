@@ -257,27 +257,76 @@ footer {
         margin-right: auto;
         width: 100%;
         transform: translateY(-50%); }
+  .home main .collection-title {
+    background-color: black;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #cecaca;
+    position: relative;
+    z-index: 100; }
+    .home main .collection-title h3 {
+      font-family: "inter";
+      font-size: 16px;
+      font-weight: 700;
+      padding-top: 25px; }
+    .home main .collection-title h2 {
+      font-family: "inter";
+      font-size: 30px;
+      font-weight: 700; }
+    .home main .collection-title p {
+      font-family: "inter";
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 0px !important;
+      padding-bottom: 25px; }
   .home main .collection {
     display: flex;
     flex-direction: row;
     width: 100%;
     max-width: 1000px;
-    box-shadow: 0px 1px 25px grey;
-    z-index: 100; }
+    box-shadow: 0px 1px 25px grey; }
     .home main .collection .collection-element {
       width: 50%;
       max-height: 500px;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
+      .home main .collection .collection-element:hover .collection-new {
+        opacity: 0.9;
+        filter: grayscale(80%); }
+      .home main .collection .collection-element:hover .overlay {
+        opacity: 0.65; }
       .home main .collection .collection-element .collection-new {
-        max-height: inherit; }
-        .home main .collection .collection-element .collection-new:hover {
-          opacity: 0.9;
-          filter: grayscale(80%); }
+        max-height: inherit;
+        transition: 0.5s ease; }
+      .home main .collection .collection-element .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: black; }
+        .home main .collection .collection-element .overlay .text {
+          color: whitesmoke;
+          font-family: "inter";
+          font-size: 15px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          letter-spacing: 1; }
   .home main .promo {
     text-align: center;
     background-color: #b85858;
+    max-width: 1000px;
     width: 100%;
-    margin: 0px auto; }
+    margin: 0px auto;
+    box-shadow: 0px 1px 25px grey;
+    z-index: 100; }
     .home main .promo input {
       padding: 5px 70px;
       color: whitesmoke;
@@ -311,6 +360,18 @@ footer {
       margin: 0px; }
 
 @media only screen and (max-width: 600px) {
+  .home main .collection-title h3 {
+    font-family: "inter";
+    font-size: 12px;
+    font-weight: 700; }
+  .home main .collection-title h2 {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 700; }
+  .home main .collection-title p {
+    font-family: "inter";
+    font-size: 12px;
+    font-weight: 700; }
   .home main .collection {
     flex-direction: column; }
     .home main .collection .collection-element {
@@ -354,7 +415,7 @@ footer {
         max-width: 400px;
         cursor: pointer; }
         .productos main .products .product-item div.top-newarrivals:hover .overlay {
-          opacity: 0.5; }
+          opacity: 0.2; }
         .productos main .products .product-item div.top-newarrivals:active .overlay {
           opacity: 0; }
         .productos main .products .product-item div.top-newarrivals:active img {
@@ -373,16 +434,8 @@ footer {
           width: 100%;
           opacity: 0;
           transition: 0.5s ease;
-          background-color: black; }
-        .productos main .products .product-item div.top-newarrivals .text {
-          color: whitesmoke;
-          font-family: "inter";
-          font-size: 17px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          text-align: center; }
+          background-color: black;
+          border-radius: 4px; }
       .productos main .products .product-item input.buttonCarrito {
         border: none;
         background-color: black;
@@ -409,20 +462,26 @@ footer {
   font-family: "inter";
   text-align: left;
   background-color: white;
-  margin: 0px;
-  padding: 70px 0px; }
-  .faqs main ol {
-    text-align: left;
-    padding: 0px;
-    margin: 2px 0px 2px 50px; }
-  .faqs main h4 {
-    font-family: "inter";
-    font-size: 17px;
-    font-weight: 900;
-    margin: 2px 0px 2px 30px; }
-  .faqs main p {
-    margin: 2px 0px 2px 30px;
-    font-family: "inter"; }
+  margin: 0px; }
+  .faqs main .textFaqs {
+    padding: 60px 0; }
+    .faqs main .textFaqs ol {
+      text-align: left;
+      padding: 0px;
+      margin: 2px 0px 2px 50px; }
+    .faqs main .textFaqs h4 {
+      font-family: "inter";
+      font-size: 17px;
+      font-weight: 900;
+      margin: 2px 0px 2px 30px; }
+    .faqs main .textFaqs p {
+      margin: 2px 0px 2px 30px;
+      font-family: "inter"; }
+  .faqs main .khaos-faqsAndInfo img {
+    max-width: 100%;
+    margin: 0px auto;
+    position: relative;
+    z-index: 100; }
 
 @media only screen and (max-width: 600px) {
   .faqs main div.fondo {
@@ -440,24 +499,23 @@ footer {
   font-family: "inter";
   text-align: left;
   background-color: white;
-  padding: 107px 0px; }
+  padding: 0px 0px; }
+  .sobre-khaos main .sobreKhaos-text {
+    margin: 60px auto; }
   .sobre-khaos main p {
     margin: 2px 40px;
     font-family: "inter"; }
   .sobre-khaos main img {
-    width: 150px;
-    margin: 40px auto;
+    max-width: 100%;
+    margin: 0px auto;
     display: block; }
 
 @media only screen and (max-width: 600px) {
   .sobre-khaos main {
     width: 100%;
-    margin: 0px auto;
-    padding: 50px 0px 70px 0px; }
+    margin: 0px auto; }
     .sobre-khaos main p {
-      margin: 2px 40px; }
-    .sobre-khaos main img {
-      width: 125px; } }
+      margin: 2px 40px; } }
 
 .contacto main {
   background-color: white;
@@ -465,86 +523,75 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   width: 100%; }
-
-.contacto main form {
-  font-family: "inter";
-  font-size: 14px;
-  font-weight: 600;
-  padding: 20px 40px; }
-
-.contacto main form legend {
-  font-family: "inter";
-  font-size: 15px;
-  font-weight: 700;
-  padding: 30px 0px; }
-
-.contacto main form label {
-  font-weight: 600;
-  color: black;
-  display: block;
-  padding-bottom: 5px; }
-
-.contacto main form input {
-  border: 1px solid black;
-  color: black;
-  border-radius: 4px;
-  padding: 5px 15px;
-  max-width: 350px;
-  width: 100%;
-  margin-bottom: 10px; }
-
-.contacto main form input[type="submit"] {
-  background-color: black;
-  color: white;
-  width: 70px; }
-
-.contacto main form input[type="submit"]:hover {
-  background-color: #333131;
-  color: whitesmoke;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
-
-.contacto main form textarea {
-  max-width: 350px;
-  width: 100%;
-  display: block;
-  border-radius: 4px;
-  padding: 5px 15px;
-  margin-bottom: 10px; }
-
-.contacto main .contacto-info h3 {
-  font-family: "inter";
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-top: 35px; }
-
-.contacto main .contacto-info h4 {
-  font-family: "inter";
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: 30px; }
-
-.contacto main .contacto-info {
-  text-align: center;
-  padding-top: 120px;
-  flex-grow: 1; }
-
-.contacto main .contacto-info p {
-  font-family: "inter";
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 10px; }
+  .contacto main form {
+    font-family: "inter";
+    font-size: 14px;
+    font-weight: 600;
+    padding: 20px 40px; }
+  .contacto main form legend {
+    font-family: "inter";
+    font-size: 15px;
+    font-weight: 700;
+    padding: 30px 0px; }
+  .contacto main form label {
+    font-weight: 600;
+    color: black;
+    display: block;
+    padding-bottom: 5px; }
+  .contacto main form input {
+    border: 1px solid black;
+    color: black;
+    border-radius: 4px;
+    padding: 5px 15px;
+    max-width: 410px;
+    width: 100%;
+    margin-bottom: 10px; }
+  .contacto main form input[type="submit"] {
+    background-color: black;
+    color: white;
+    width: 70px; }
+  .contacto main form input[type="submit"]:hover {
+    background-color: #333131;
+    color: whitesmoke;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+  .contacto main form textarea {
+    max-width: 410px;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    padding: 5px 15px;
+    margin-bottom: 10px; }
+  .contacto main .contacto-info h3 {
+    font-family: "inter";
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 35px; }
+  .contacto main .contacto-info h4 {
+    font-family: "inter";
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px; }
+  .contacto main .contacto-info {
+    text-align: center;
+    padding-top: 100px;
+    flex-grow: 1; }
+  .contacto main .contacto-info p {
+    font-family: "inter";
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px; }
 
 @media only screen and (max-width: 600px) {
   .contacto main {
     flex-direction: column; }
-  .contacto main .contacto-info h3 {
-    margin-top: 20px; }
-  .contacto main .contacto-info h4 {
-    margin-top: 20px;
-    margin-bottom: 40px; }
-  .contacto main .contacto-info {
-    padding-top: 0px; }
-  .contacto main .contacto-info p {
-    font-size: 14px;
-    margin-bottom: 10px; } }
+    .contacto main .contacto-info h3 {
+      margin-top: 20px; }
+    .contacto main .contacto-info h4 {
+      margin-top: 20px;
+      margin-bottom: 40px; }
+    .contacto main .contacto-info {
+      padding-top: 0px; }
+    .contacto main .contacto-info p {
+      font-size: 14px;
+      margin-bottom: 10px; } }
