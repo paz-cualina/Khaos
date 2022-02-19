@@ -251,7 +251,7 @@ footer {
     .home main .img-wrapper .img-container {
       max-height: inherit;
       transform: translateY(50%); }
-      .home main .img-wrapper .img-container img#portada {
+      .home main .img-wrapper .img-container #portada {
         display: block;
         margin-left: auto;
         margin-right: auto;
