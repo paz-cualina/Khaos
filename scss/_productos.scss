@@ -6,6 +6,7 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        padding-top: 35px;
 
         .product-item {
             font-family: "inter";
@@ -98,7 +99,13 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .productos .product-item div.top-newarrivals:hover .overlay {
-        opacity: 0;
+    .productos main {
+        .products {
+            padding-top: 0px;
+        }
+    
+        .productos .product-item div.top-newarrivals:hover .overlay {
+            opacity: 0;
+        }
     }
 }
