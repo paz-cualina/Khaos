@@ -3,10 +3,10 @@
 Este es un proyecto elaborado como entrega final del curso de Desarrollo Web en Coderhouse. El mismo es un sitio web full responsive que cuenta con cinco páginas que corresponden un emprendimiento de vestimenta personal llamado Khaos.
 
 ## Technology Stack
-HTML5
-CSS3
-SASS
-Node.js
+- HTML5
+- CSS3
+- SASS
+- Node.js
 
 ##  Setup Instructions
 
