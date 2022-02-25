@@ -1,0 +1,47 @@
+.page404 {
+    margin: 0px;
+    padding: 0px;
+    background-color: map-get($theme-principal, primary-color);
+    color: map-get($theme-principal, secondary-color);
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 150px;
+
+    .logo img {
+        width: 110px;
+    }
+
+    h3 {
+        @include font-style(20px, 600);
+        padding-top: 25px;
+    }
+
+    h4 {
+        @include font-style(16px, 600);
+    }
+
+    p {
+        @include font-style(30px, 700);
+        letter-spacing: 2px;
+        padding-bottom: 25px;
+    }
+
+    input {
+        padding: 5px 70px;
+        color: map-get($theme-principal, secondary-color);
+        font-family: "inter";
+        font-weight: 400;
+        letter-spacing: 1px;
+        background-color: map-get($theme-principal, primary-color);
+        cursor: pointer;
+        border: 1px solid map-get($theme-principal, secondary-color);
+        margin: 20px 0px 60px 0px;
+        border-radius: 7px;
+
+        &:hover {
+            background-color: rgb(51, 49, 49);
+            color: map-get($theme-principal, secondary-color);
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+}
