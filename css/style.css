@@ -127,14 +127,14 @@ footer {
     footer .footer-centrado .newsletter {
       width: 40%; }
       footer .footer-centrado .newsletter .btn-outline-secondary {
+        font-size: 14px;
         color: whitesmoke;
-        border-color: whitesmoke;
-        font-size: 14px; }
+        border-color: whitesmoke; }
       footer .footer-centrado .newsletter .form-control {
+        font-size: 13px;
         border-radius: 7px;
         background-color: black;
-        border: 1px solid whitesmoke;
-        font-size: 13px; }
+        border: 1px solid whitesmoke; }
         footer .footer-centrado .newsletter .form-control:focus {
           background-color: black;
           border: 1px solid #afafaf;
@@ -208,8 +208,6 @@ footer {
   header .carrito {
     padding-left: 20px;
     font-size: 12px; }
-  header .search {
-    display: none; }
   header .logo {
     width: 100%; }
   header .logo img {
@@ -322,6 +320,8 @@ footer {
       font-family: "inter";
       font-size: 60px;
       font-weight: 700; }
+      .home main .collection-title h2:hover {
+        color: #b85858; }
     .home main .collection-title p {
       font-family: "inter";
       font-size: 16px;
@@ -359,7 +359,6 @@ footer {
         background-color: black; }
         .home main .collection .collection-element .overlay .text {
           color: whitesmoke;
-          font-family: "inter";
           font-size: 15px;
           position: absolute;
           top: 50%;
@@ -383,7 +382,6 @@ footer {
     .home main .promo a {
       padding: 8px 60px;
       color: whitesmoke;
-      font-family: "inter";
       font-weight: 400;
       letter-spacing: 1px;
       background-color: black;
@@ -400,7 +398,6 @@ footer {
       display: flex;
       flex-direction: column; }
       .home main .promo .text-container h2 {
-        font-family: "inter";
         font-weight: bold;
         font-size: 35px;
         color: whitesmoke;
@@ -408,7 +405,6 @@ footer {
         padding-bottom: 3px;
         margin: 0px; }
       .home main .promo .text-container h3 {
-        font-family: "inter";
         font-weight: 600;
         font-size: 16px;
         color: whitesmoke;
@@ -449,23 +445,28 @@ footer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 35px; }
+    padding-top: 50px; }
     .productos main .products .product-item {
-      font-family: "inter";
       font-weight: 600;
       text-align: center;
       padding-top: 10px;
       padding-bottom: 40px; }
-      .productos main .products .product-item select {
-        border: 2px solid black;
-        width: 40px;
-        border-radius: 4px; }
+      .productos main .products .product-item .info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        padding: 5px 5px 15px; }
+        .productos main .products .product-item .info-item .name-product {
+          text-align: left; }
+        .productos main .products .product-item .info-item select {
+          border: none;
+          margin-right: auto;
+          padding-left: 10px; }
       .productos main .products .product-item img {
         width: inherit;
         max-width: inherit;
         margin-bottom: -4px; }
-      .productos main .products .product-item div:not(.top-newarrivals) {
-        padding-top: 5px; }
       .productos main .products .product-item div.top-newarrivals {
         position: relative;
         overflow: hidden;
@@ -495,22 +496,18 @@ footer {
           background-color: black;
           border-radius: 4px; }
       .productos main .products .product-item input.buttonCarrito {
-        border: none;
-        background-color: black;
-        color: whitesmoke;
+        border: 2px solid #afafaf;
+        background-color: transparent;
+        color: #afafaf;
+        font-size: 14px;
         border-radius: 4px;
-        padding: 8px 20px;
-        font-family: "inter";
+        padding: 6px 15px;
+        width: 100%;
         cursor: pointer; }
         .productos main .products .product-item input.buttonCarrito:hover {
-          background-color: #b85858;
+          background-color: #afafaf;
           color: whitesmoke;
-          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
-      .productos main .products .product-item input.buttonCantidad {
-        border: 2px solid black;
-        width: 40px;
-        padding: 6px;
-        border-radius: 4px; }
+          transition: all 0.3s ease; }
 
 @media only screen and (max-width: 600px) {
   .productos main .products {
@@ -519,7 +516,6 @@ footer {
     opacity: 0; } }
 
 .faqs main {
-  font-family: "inter";
   text-align: left;
   background-color: white;
   margin: 0px; }
@@ -528,15 +524,15 @@ footer {
     .faqs main .textFaqs ol {
       text-align: left;
       padding: 0px;
-      margin: 2px 0px 2px 50px; }
+      margin: 2px 0px 2px 50px;
+      font-size: 15px; }
     .faqs main .textFaqs h4 {
       font-family: "inter";
-      font-size: 17px;
-      font-weight: 900;
-      margin: 2px 0px 2px 30px; }
+      font-size: 15px;
+      font-weight: 600;
+      margin: 2px 0px 8px 30px; }
     .faqs main .textFaqs p {
-      margin: 2px 0px 2px 30px;
-      font-family: "inter"; }
+      margin: 2px 0px 2px 30px; }
   .faqs main .khaos-faqsAndInfo img {
     max-width: 100%;
     margin: 0px auto;
@@ -555,15 +551,14 @@ footer {
 
 .sobre-khaos main {
   margin: 0px;
-  font-family: "inter";
   text-align: left;
   background-color: white;
   padding: 0px 0px; }
   .sobre-khaos main .sobreKhaos-text {
-    margin: 60px auto; }
+    margin: 80px auto;
+    font-size: 15px; }
   .sobre-khaos main p {
-    margin: 2px 40px;
-    font-family: "inter"; }
+    margin: 2px 40px; }
   .sobre-khaos main img {
     max-width: 100%;
     margin: 0px auto;
@@ -581,7 +576,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  padding: 40px 0px; }
   .contacto main form {
     font-family: "inter";
     font-size: 14px;
@@ -590,7 +586,7 @@ footer {
   .contacto main form legend {
     font-family: "inter";
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 30px 0px; }
   .contacto main form label {
     font-weight: 600;

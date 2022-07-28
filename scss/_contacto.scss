@@ -4,6 +4,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        padding: 40px 0px;
 
    form {
         @include font-style(14px, 600);
@@ -11,7 +12,7 @@
     }
 
     form legend {
-        @include font-style(15px, 700);
+        @include font-style(15px, 600);
         padding: 30px 0px;
     }
 

@@ -1,6 +1,8 @@
 $border-color-focus: #afafaf;
 $box-shadow-color: rgba(169, 169, 169, 0.25);
+$box-shadow-btn: 0 8px 12px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 $max-width: 1000px;
+$transition: all 0.3s ease;
 
 $theme-principal: (
     primary-color: black,
@@ -192,16 +194,16 @@ footer {
             width: 40%;
 
             .btn-outline-secondary {
+                font-size: 14px;
                 color: map-get($theme-principal, secondary-color);
                 border-color: map-get($theme-principal, secondary-color);
-                font-size: 14px;
             }
 
             .form-control {
+                font-size: 13px;
                 border-radius: 7px;
                 background-color: map-get($theme-principal, primary-color);
                 border: 1px solid map-get($theme-principal, secondary-color);
-                font-size: 13px;
 
                 &:focus {
                     background-color: map-get($theme-principal, primary-color);
@@ -316,10 +318,6 @@ footer {
         .carrito {
             padding-left: 20px;
             font-size: 12px;
-        }
-
-        .search {
-            display: none;
         }
 
         .logo {
